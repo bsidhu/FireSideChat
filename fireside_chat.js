@@ -15,7 +15,7 @@ $(document).ready(function() {
     
     //grab radio selection for input type
     var postType = $("input[name=messageType]:checked").val();
-    //if selection is text
+    //if selection is text, else if link, else if image
     if (postType=="text"){
       $('.messages').append("<p><b>"+message.name+" says: </b>"+message.text+"</p>");
     } else if (postType=="link"){
@@ -24,7 +24,6 @@ $(document).ready(function() {
       $('.messages').append("<p><b>"+message.name+" says: </b><img src='"+message.text+"'></p>");
     }
 
-    
     /////////////////
     // Leave this guy alone:
     // Whenever a new message comes in, scroll down the .messages div to the bottom
