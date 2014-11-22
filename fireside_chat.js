@@ -20,7 +20,7 @@ $(document).ready(function() {
       $('.messages').append("<p><b>"+message.name+" says: </b>"+message.text+"</p>");
     } else if (postType="link"){
       $('.messages').append("<p><b>"+message.name+" says: </b><a href='"+message.text+"'>"+message.text+"</a></p>");
-    } else if (postType="image"){
+    } else {
       $('.messages').append("<p><b>"+message.name+" says: </b><img src='"+message.text+"'></p>");
     }
 
