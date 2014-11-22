@@ -19,15 +19,13 @@ $(document).ready(function() {
     if (postType=="text"){
       $('.messages').append("<p><b>"+message.name+" says: </b>"+message.text+"</p>");
     } else if (postType="link"){
-      $('.messages').append("<p><b>"+message.name+" says: </b><a href='"+message.text+"'>Link Posted</a></p>");
+      $('.messages').append("<p><b>"+message.name+" says: </b><a href='"+message.text+"'>"+message.text+"</a></p>");
     } else if (postType="image"){
       $('.messages').append("<p><b>"+message.name+" says: </b><img src='"+message.text+"'></p>");
     }
 
     
     /////////////////
-
-
     // Leave this guy alone:
     // Whenever a new message comes in, scroll down the .messages div to the bottom
     if($(".messages").is(":visible")) {
